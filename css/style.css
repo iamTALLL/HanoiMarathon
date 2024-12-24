@@ -1,0 +1,293 @@
+/* Reset the default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+
+.navbar {
+    background-color: #2d3a56;
+    overflow: hidden;
+    height: 90px; /* Chiều cao của navbar */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    position: fixed; /* Đặt navbar ở trên cùng */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Đảm bảo navbar nằm trên các phần tử khác */
+}
+
+.navbar .name {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-left: auto; /* Đẩy nút sang bên phải */
+    margin-bottom: 8px; /* Đảm bảo nút sát mép dưới */
+    align-self: flex-end; /* Căn nút xuống dưới */
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #485c3b; /* Hiệu ứng hover cho các liên kết */
+}
+
+.navbar img {
+    width: 100px; /* Kích thước logo */
+    margin-right: 10px; /* Khoảng cách giữa logo và tên trường */
+}
+
+
+/* Main container */
+.container {
+    width: 80%;
+    padding: 20px;
+    margin-top: 100px; /* Add margin between navbar and table */
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+/* Race list styling */
+.race-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.race-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px); /* For 3 items per row */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.race-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.race-item h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.race-item p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.join-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.join-btn:hover {
+    background-color: #218838;
+}
+
+/* Race list item for admin */
+.admin-race-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-race-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.admin-race-item h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.admin-race-item p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.approve-btn, .reject-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.approve-btn:hover {
+    background-color: #0056b3;
+}
+
+.reject-btn {
+    background-color: #dc3545;
+}
+
+.reject-btn:hover {
+    background-color: #c82333;
+}
+
+/* Update button styles for admin and participant pages */
+.update-btn {
+    background-color: #ffc107;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.update-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Styling for the race table (Admin view) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+
+th {
+    background-color: #f8f8f8;
+}
+
+td {
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+td:hover {
+    background-color: #f1f1f1;
+}
+
+td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Small adjustments for responsive layout */
+@media (max-width: 768px) {
+    .race-item, .admin-race-item {
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form select {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Style for the race record table */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.join-btn.disabled {
+    background-color: #ccc; 
+    pointer-events: none;   
+}
+
+.approved {
+    color: green;
+}
+
+.pending {
+    color: yellow;
+}
+
+.rejected {
+    color: red;
+}
+

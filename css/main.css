@@ -1,0 +1,159 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #0c0c0c;
+    background-color: #ffffff;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.main {
+    margin-top: 90px; /* Tạo khoảng cách từ navbar đến nội dung chính */
+}
+
+.navbar {
+    background-color: #2d3a56;
+    overflow: hidden;
+    height: 90px; /* Chiều cao của navbar */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    position: fixed; /* Đặt navbar ở trên cùng */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Đảm bảo navbar nằm trên các phần tử khác */
+}
+
+.navbar .name {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-left: auto; /* Đẩy nút sang bên phải */
+    margin-bottom: 8px; /* Đảm bảo nút sát mép dưới */
+    align-self: flex-end; /* Căn nút xuống dưới */
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #485c3b; /* Hiệu ứng hover cho các liên kết */
+}
+
+.navbar img {
+    width: 100px; /* Kích thước logo */
+    margin-right: 10px; /* Khoảng cách giữa logo và tên trường */
+}
+
+.navbar .signup {
+    display: flex;
+    flex-direction: column; /* Sắp xếp tên trường và lớp theo chiều dọc */
+}
+
+.navbar .signin {
+    font-weight: bold; 
+    color: #ffffff; 
+    font-size: 20px; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.navbar .nav-buttons {
+    display: flex;
+    margin-left: auto;
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.img-dispay {
+    width: 100%;
+    margin: 0; /* Loại bỏ khoảng cách thừa */
+    padding: 0;
+    position: relative;
+    overflow: hidden; /* Đảm bảo không có phần dư */
+}
+
+.img-dispay img {
+    width: 100%; /* Chiều ngang bằng 100% của phần tử cha */
+    height: auto; /* Duy trì tỷ lệ khung hình */
+    display: block; /* Loại bỏ khoảng trống dưới ảnh */
+}
+
+/* Overlay Text Styling */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.overlay-text::before {
+    content: ""; /* Tạo pseudo-element */
+    position: absolute;
+    top: -20%; /* Điều chỉnh độ phủ của nền */
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    z-index: -1; /* Đặt nền gradient phía sau chữ */
+    border-radius: 8px; /* Làm mềm các góc của nền */
+}
+
+.overlay-text h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.overlay-text h1 span {
+    color: #afc9e0; /* Highlight chữ 'DATE' */
+}
+
+.overlay-text p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+ 
+.aboutus {
+    padding: 60px 20px;
+    background-color: #f0f4f8;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.aboutus h1 {
+    padding: 0px 200px;
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.aboutus h2 {
+    padding: 0px 220px;
+    font-size: 36px;
+    color: #103357;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.aboutus p {
+    padding: 0px 280px;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    color: #555;
+}
